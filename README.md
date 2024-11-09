@@ -33,7 +33,7 @@ I created a weather app with key features:
 
 - API 데이터 가져오기
 - 비동기 함수 및 대기
-- 약속 및 비동기 코드
+- 프로미스 및 비동기 코드
 
 # 🛠️ 개선 영역:
 

@@ -1,0 +1,269 @@
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  user-select: none;
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5)); 
+}
+
+* {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+#background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.header {
+  color: rgba(88, 82, 82, 0.8); 
+  width: 100%; 
+}
+
+#date,
+#clock {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+#clock{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.upper-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-between;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 2.4rem;
+  height: 1.5rem;
+  margin-left:0.6rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1rem;
+  width: 1rem;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2195f3c5; 
+}
+
+input:checked + .slider:before {
+  transform: translateX(13px);
+}
+
+.search-bar{
+  padding-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#locationInput {
+  padding:10px;
+  font-size:1rem;
+  font-weight:bold;
+  border:none;
+  border-radius:5px;
+  margin:10px
+}
+
+button[type="submit"] {
+  padding :10px 20px;
+  font-weight:bold;
+  font-size:1rem;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+button[type="submit"]:hover {
+  background-color:#2196F3; 
+  color:white; 
+}
+
+#error-message {
+  display: none; 
+  position: fixed; 
+  top: 20px;
+  left: 50%; 
+  transform: translateX(-50%); 
+  background-color: rgba(255, 0, 0, 0.8); 
+  color: white; 
+  padding: 10px;
+  border-radius: 5px; 
+  z-index: 10; 
+}
+
+.weather-app {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.699); 
+  height: 44rem;
+  max-width: 80rem;
+  align-self: center;
+  justify-self: center;
+  box-shadow: 0rem 0rem 2rem 1rem rgba(0, 0, 0, 0.363);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  transition: transform .3s ease;
+}
+
+
+.weather-app:hover {
+   transform: scale(1.02); 
+}
+
+.weather-info {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-items: center;
+}
+
+
+#location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:1rem
+}
+.city{
+  font-size: 3rem;
+}
+.country{
+  font-weight: 100;
+  font-size: 1rem;
+}
+#temperature {
+   display:flex; 
+   align-items:center; 
+   justify-content:center; 
+}
+
+.temp-value {
+   font-size:4rem; 
+   font-weight:bold; 
+}
+
+.temp-icon {
+   display:flex; 
+   align-items:flex-start; 
+   margin-left:5px; 
+}
+
+.temp-icon img {
+   width:2rem; 
+   height:auto; 
+}
+
+#description{
+  font-size:1.5rem;
+  margin-top:0;
+  margin-bottom:3rem;
+}
+
+#humidity, #feels-like{
+  margin:0.5rem;
+}
+
+@media (max-width: 600px) {
+  body {
+    flex-direction: column; 
+  }
+
+  .weather-app {
+    height: auto; 
+    padding: 1rem; 
+    margin: 0 1rem; 
+    box-shadow: none; 
+    border-radius: 1rem;
+  }
+
+  .header {
+    text-align: center; 
+    padding-bottom: 1rem; 
+  }
+
+  .upper-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem; 
+  }
+
+  #location {
+    font-size: 2rem; 
+    text-align: center; 
+    margin-top: 1rem; 
+  }
+
+  .city {
+    font-size: 2.5rem; 
+  }
+
+  .country {
+    font-size: 0.9rem; 
+  }
+
+  #temperature {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .temp-value {
+    font-size: 3rem; 
+  }
+
+  #description, #humidity, #feels-like {
+    font-size: 1rem; 
+    text-align: center; 
+    margin-top: 0.5rem;
+  }
+
+}

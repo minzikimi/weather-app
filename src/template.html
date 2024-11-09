@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+
+  <!-- <link rel="stylesheet" href="./css/style.css" />
+  <script src="index.js" type="module"></script> -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Major+Mono+Display&family=Space+Grotesk:wght@300..700&family=Turret+Road:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+  <img id ="background-image" src="./img/hot.gif" >
+  <div class="weather-app">
+    <div class="header">
+      <div class="upper-container">
+        <div class="switch-button">
+          <label class="switch">
+            <input type="checkbox" id="toggleTemp">
+            <span class="slider"></span>
+          </label>
+          <span id="temp-unit">°C</span>
+          <!-- <span id="tempUnit">°F</span> -->
+        </div>
+        <div>
+          <h2 id="date"> </h2>
+          <h2 id="clock"></h2>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="main-app">
+      <div class="search-bar">
+        <form class="weather-form">
+          <input type="text" id="locationInput" placeholder="Enter a city">
+          <button type="submit" id="searchButton">Search</button>
+        </form>
+        <small id="error-message">
+          <p></p>
+        </small>
+      </div>
+    
+
+      <div class="weather-info">
+        <h1 id="location">
+          <span class="city"></span>
+          <span class="country"></span>
+        </h1>
+        <img src="./img/weather-pouring.svg" alt="icon">
+        <h1 id="temperature">
+          <span class="temp-value"></span>
+          <span class="temp-icon">
+            <img class="temp-unit-icon" src="./img/temperature-celsius.svg" alt="temperature unit">
+          </span>
+        </h1>
+        <p id="description"></p>
+        <p id="humidity"></p>
+        <p id="feels-like"></p>
+      </div>
+      <!-- <div class="hourly-weather">
+
+      </div> -->
+    </div>
+
+
+  </div>
+</body>
+</html>

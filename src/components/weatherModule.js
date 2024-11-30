@@ -153,7 +153,7 @@ function getWeatherBackground(weatherID) {
     case (weatherID > 800 && weatherID <= 804):
       return cloudyGif;
     default:
-      return hotGif; // Ensure this path is correct
+      return hotGif; 
   }
 }
 
@@ -167,7 +167,7 @@ function displayError(message) {
 
   setTimeout(() => {
       errorContainer.style.display = "none"; // Hide after timeout
-  }, 3000); // Adjust time as needed (e.g., 3000ms = 3 seconds)
+  }, 3000); 
 }
 
 

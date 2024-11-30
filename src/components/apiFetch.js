@@ -61,7 +61,7 @@ export async function getUserLocationAndWeather() {
   
   } catch (error) {
     console.error("We failed to fetch your location:", error);
-    throw error; // 오류를 상위로 전파
+    throw error; //Send error
   }
 }
 
